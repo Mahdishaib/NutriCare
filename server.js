@@ -6,13 +6,13 @@ require('dotenv').config();
 
 // --- IMPORT MODELS ---
 const User = require('./models/User');
-const Ingredient = require('./models/Ingredient');
-const Recipe = require('./models/Recipe');
-const Plan = require('./models/Plan');
-const Log = require('./models/Log');         // NEW
-const Payment = require('./models/Payment'); // NEW
-const Message = require('./models/Message'); // NEW
-const Review = require('./models/Review');   // NEW
+const Ingredient = require('./Ingredient');
+const Recipe = require('./Recipe');
+const Plan = require('./Plan');
+const Log = require('./Log');         // NEW
+const Payment = require('./Payment'); // NEW
+const Message = require('./Message'); // NEW
+const Review = require('./Review');   // NEW
 
 const app = express();
 
@@ -134,4 +134,5 @@ app.put('/api/payments/:id', async (req, res) => {
 
 // --- START SERVER ---
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
